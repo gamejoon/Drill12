@@ -52,6 +52,7 @@ class Zombie:
             Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y, self.size, self.size)
         else:
             Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, self.size, self.size)
+        draw_rectangle(self.x - self.size // 2, self.y - self.size // 2, self.x + self.size // 2, self.y + self.size // 2)
 
 
     def handle_event(self, event):
